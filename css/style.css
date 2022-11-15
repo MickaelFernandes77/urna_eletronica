@@ -1,0 +1,176 @@
+@keyframes pisca{
+    0%{opacity: 0.2;}
+    50%{opacity: 1;}
+    100%{opacity: 0.2;}
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Urna (elemento pai) */
+.urna{
+    background-color: #dbd5c9;
+    padding: 30px;
+    display: flex;
+}
+
+/* Tela, onde aparecerá a foto do candidato  */
+.tela{
+    width: 500px;
+    height: 320px;
+    background: linear-gradient(to right, #E8E8E8, #C1C1C1);
+    border: solid 1px #555;
+    display: flex;
+    flex-direction: column;
+}
+
+/* divisao um da tela */
+.d-1{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+/* divisao esquerda, da divisao 1 */
+.d-1-esquerdo{
+    flex: 1;
+    padding-left: 20px;
+}
+
+.d-1-1, .d-1-2, .d-1-3{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.d-1-2{
+    justify-content: center;
+}
+
+/* local onde aparece o numero do canditato que será votado */
+.numero{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 3px;
+    font-size: 23px;
+}
+
+.pisca{
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.d-1-4{
+    flex: 1;
+    line-height: 30px;
+}
+
+/* divisao direita, da divisao 1 */
+.d-1-direito{
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.d-1-imagem{
+    border: solid 1px #000;
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    display: none;}
+
+.d-1-imagem.pequeno{
+    font-size: 12px;
+    width: 80%;
+}
+    
+/* formatação para a imagem ocupar até 100% do espaço disponível */
+.imagem-candidato{
+    width: 100%;
+}
+
+/* divisão dois da tela */
+.d-2{height: 50px;}
+
+.texto-d-2{
+    padding-left: 10px;
+    padding-top: 4px;
+    margin-top: -10px;
+    font-size: 14px;
+    border-top: solid 2px #000;}
+
+/* teclado da urna */
+.teclado{
+    margin-left: 30px;
+    background-color: #403A3A;
+}
+
+.teclado-linha{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* formatação padrão dos botoes de numeros e dos demais de confirma, corrige e branco */
+.teclado-botao{
+    width: 70px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #555;
+}
+
+.botao-branco, .botao-corrige, .botao-confirma{
+    color: #000;
+    font-size: 15px;
+}
+
+.botao-branco{
+    background-color: #fff;   
+}
+
+.botao-corrige{
+    background-color: #F09046;
+}
+
+.botao-confirma{
+    background-color: #48C079;
+    width: 90px;
+    height: 50px;
+}
+
+.aviso-grande, .aviso-grande-branco{
+    font-size: 30px;
+}
+.aviso-grande, .aviso-grande-branco, .aviso-fim{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.aviso-grande{
+    margin-top: 35px;}
+
+.aviso-grande-branco{
+    margin-left: 30px;}
+
+.aviso-fim{
+    font-size: 70px;
+    margin-top: 22%;
+} 
